@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> love </title>
+	<meta charset="UTF-8">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<style>
+	/* css reset */
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+	body { background:#fff; font-size:12px; font-family:'微软雅黑','宋体',sans-serif;color:#231F20; }
+	td,th,caption { font-size:14px; }
+	/*h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }*/
+	address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+	a { color:#555; text-decoration:none; }
+	a:hover { text-decoration:underline; }
+	img { border:none; }
+	ol,ul,li { list-style:none; }
+	input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+	table { border-collapse:collapse; }
+	html {overflow-y: scroll;} 
+	/* css common */
+	.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+	.clearfix { *zoom:1; }
+	
+	/* index */
+	body {
+		background: rgb(255, 255, 238);
+		overflow: hidden;
+	}
+	#wrap {
+		width: 980px;
+		height: 612px;
+		border-bottom: solid 5px #231F20;
+		margin: auto;
+	}
+	
+	/* 表白 */
+	#wrap .say {width: 450px;height: 100%;font-size:16px;padding-top: 120px;padding-left: 30px;float: left;line-height: 35px;}
+	
+	/* 树 */
+	#wrap .tree {width: 450px;height: 100%;float: right;position: relative;}
+		
+		#wrap .tree img:nth-child(2){
+			position: absolute;
+			top: 90px;
+			left: -14px;
+			animation:shuye 8s linear 0s infinite;
+		}
+	
+		#wrap .tree img:nth-child(3){
+			position: absolute;
+			top: 300px;
+			left: -20px;
+			animation:shuye 8s linear 0s infinite;
+		}
+		#wrap .tree img:nth-child(4){
+			position: absolute;
+			top: 362px;
+			left: -290px;
+			animation:shuye 8s linear 0s infinite;
+		}
+		#wrap .tree img:nth-child(5){
+			position: absolute;
+			top: 506px;
+			left: 150px;
+			animation:shuye 8s linear 0s infinite;
+		}
+
+
+	@keyframes shuye{
+		from{transform:rotate(0deg)}
+		to{transform:rotate(360deg)}
+	}
+	</style>
+</head>
+
+	<body>
+        
+		<div id="wrap">
+			<div class="say" id="font">
+                <p>Our Story 我们的故事</p>
+                <p>// </p>
+                <p>// 不经意相识，或许是缘分，或许是注定的。</p>
+                <p>// 以后不管有怎么样，我都会在。</p>
+                <p>// 就算全世界都都抛弃你，记得还有我。</p>
+                <p>// 再累都不用害怕，因为你有我。</p>
+                <p>// 记得在你最需要的时候想起我。</p>
+                <p>// 我会一直陪着你。</p>
+                <p>// You are my only girl..永远..</p>
+                <p>// 感谢有你。</p>
+                <p>-- phper --</p>
+				<h1>HTML5唯美表白</h1>
+			</div>
+			<div class="tree">
+				<img src="love.png" />
+				<img src="yellow.png" />
+				<img src="red.png" />
+				<img src="pink.png" />
+				<img src="yellow.png" />
+			</div>
+		</div>
+		<audio src="102.mp3" autoplay="autopaly"  loop="loop"  id="music"></audio>
+        <script>
+			
+		var id = setInterval("writeContent()",150);
+		
+		var num = 1;
+		var txt = '<p>Our Story 我们的故事</p>';
+			txt += '<p> </p>';
+			txt += '<p> 不经意相识，或许是缘分，或许是注定的。</p>';
+			txt += '<p> 以后不管有怎么样，我都会在。</p>';
+			txt += '<p> 就算全世界都都抛弃你，记得还有我。</p>';
+			txt += '<p> 再累都不用害怕，因为你有我。</p>';
+			txt += '<p> 记得在你最需要的时候想起我。</p>';
+			txt += '<p> 我会一直陪着你。</p>';
+			txt += '<p> You are my only girl..永远..</p>';
+			txt += '<p> 感谢有你。</p>';
+			txt += '<p>-- for  us  --</p>';
+			txt += '<h1>--玲玲&&帅帅--</h1>'; 
+			
+		function writeContent()
+		{
+				
+			if(num>txt.lentgh)
+			{
+				clearInterval(id);
+			}
+			document.getElementById('font').innerHTML=txt.substr(0,num++) + '_';
+		}
+
+
+		setTimeout("change_music()",38000);
+
+		function change_music(){
+
+			var music_obj=document.getElementById('music');
+			music_obj.src="love.mp3";
+
+
+		}
+        </script>
+	</body>
+</html>
